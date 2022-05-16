@@ -35,10 +35,10 @@ Optimal Interpolation of historical dissolved oxygen data from the World Ocean D
 - Next perform optimal interpolation to establish monthly climatology
 - This part is in MATLAB, in two functions: 
 - use the function objmap_o2clim(month,zlevel) and loop over 12 months and 47 zlevels
->> for month=1:12; for zlevel=1:47; objmap_o2clim(month,zlevel); end; end;
+> for month=1:12; for zlevel=1:47; objmap_o2clim(month,zlevel); end; end;
 - This function requires two supporting files (basin_name.txt and basin_mask_01.nc) available from the Dropbox link
 - use the function gen_netcdf_clim to generate a single netCDF file
->> gen_netcdf_clim;
+> gen_netcdf_clim;
 
 ### 4. Generate anomaly fields
 - Subtract the monthly climatology to calculate the anomaly

@@ -21,7 +21,6 @@ Optimal Interpolation of historical dissolved oxygen data from the World Ocean D
 - Proceed to download the data
 - Repeat the above process for CTD oxygen (separate download)
 - Pre-downloaded OSD and CTD data as of May 2022 used for the 2022 Liege Colloquium is available [here](https://www.dropbox.com/sh/ivfo1yicivwaea7/AADiYhXFX8NROevV3yucOrLca?dl=0)
-- Please note that this version includes T and S data as well
 
 ### 2. Binning
 - Execute two scripts to generate annually binned data

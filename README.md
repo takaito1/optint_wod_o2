@@ -14,9 +14,10 @@ Optimal Interpolation of historical dissolved oxygen data from the World Ocean D
 
 ### 1. Obtain the ragged netCDF array from WOD Select: 
 [WOD Select](https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html)
-- Under "Selection Criteria", choose "Dataset" and "Measured Variables"
+- Under "Selection Criteria", choose "Dataset", "Measured Variables" and "Data Exclusion using WOD QC Flags"
 - Under Dataset, select "Ocean Station Data" for bottle O2 data
 - Under Measured Variables, select "Oxygen" for 1 and 2
+- Under Data Exclusion, select "Oxygen" and "ALL" for both profile and sample
 - Proceed to download the data
 - Repeat the above process for CTD oxygen (separate download)
 - Pre-downloaded OSD and CTD data as of March 3rd, 2022 is available [here](https://www.dropbox.com/sh/ivfo1yicivwaea7/AADiYhXFX8NROevV3yucOrLca?dl=0)

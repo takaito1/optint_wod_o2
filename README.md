@@ -1,5 +1,6 @@
 # optint_wod_o2
 Optimal Interpolation of historical dissolved oxygen data from the World Ocean Database
+This code set requires python (jupyter notebook) and MATLAB
 
 ## Objective: 
 - Assess global dissolved oxygen inventory trend
@@ -35,19 +36,26 @@ Optimal Interpolation of historical dissolved oxygen data from the World Ocean D
 - Next perform optimal interpolation to establish monthly climatology
 - This part is in MATLAB, in two functions: 
 - use the function objmap_o2clim(month,zlevel) and loop over 12 months and 47 zlevels
+- Execite the following MATLAB command:
 > for month=1:12; for zlevel=1:47; objmap_o2clim(month,zlevel); end; end;
 - This function requires two supporting files (basin_name.txt and basin_mask_01.nc) available from the Dropbox link
 - use the function gen_netcdf_clim to generate a single netCDF file
+- Execute the following MATLAB command:
 > gen_netcdf_clim;
 
 ### 4. Generate anomaly fields
+- Execute the following one code: 
+- pentadal_o2anom.ipynb
 - Subtract the monthly climatology to calculate the anomaly
 - Aggregate monthly into yearly anomaly
 - Combine OSD and CTD data into a single field after 1987
 - Apply 5 year running mean
-- pentadal_o2anom.ipynb
 
 ### 5. Perform optimal interpolation
 - This part is done by the MATLAB script
-- use the objmap_o2 function and loop over the years 
-- use the function gen_netcdf to generate a single netCDF file (end)
+- use the objmap_o2 function and loop over the years
+- Execute the following MATLAB command:
+> for t=1:52; objmap_o2(t); end;
+- use the function gen_netcdf to generate a single netCDF file
+- Execute the following MATLAB command: 
+> gen_netcdf;

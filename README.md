@@ -23,18 +23,22 @@ Optimal Interpolation of historical dissolved oxygen data from the World Ocean D
 - Pre-downloaded OSD and CTD data as of May 2022 used for the 2022 Liege Colloquium is available [here](https://www.dropbox.com/sh/ivfo1yicivwaea7/AADiYhXFX8NROevV3yucOrLca?dl=0)
 
 ### 2. Binning
-- Execute two scripts to generate annually binned data
+- Execute the following two codes: 
 - bin_wod_OSD.ipynb
 - bin_wod_CTD.ipynb
+- Execute two scripts to generate annually binned data
 
 ### 3. Monthly climatology
-- Execute one script to generate statistical mean climatology data
+- Execute the following one code: 
 - stat_mean_bin.ipynb
+- Generate statistical mean climatology data
 - Next perform optimal interpolation to establish monthly climatology
 - This part is in MATLAB, in two functions: 
 - use the function objmap_o2clim(month,zlevel) and loop over 12 months and 47 zlevels
-- This function requires two supporting files (basin_name.txt and basin_mask_01.nc)
+>> for month=1:12; for zlevel=1:47; objmap_o2clim(month,zlevel); end; end;
+- This function requires two supporting files (basin_name.txt and basin_mask_01.nc) available from the Dropbox link
 - use the function gen_netcdf_clim to generate a single netCDF file
+>> gen_netcdf_clim;
 
 ### 4. Generate anomaly fields
 - Subtract the monthly climatology to calculate the anomaly

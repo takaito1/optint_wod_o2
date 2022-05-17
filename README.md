@@ -37,7 +37,7 @@ See requirements.txt for the list of required python packages
 - Next perform optimal interpolation to establish monthly climatology
 - This part is in MATLAB, in two functions: 
 - use the function objmap_o2clim(month,zlevel) and loop over 12 months and 47 zlevels
-- Execite the following MATLAB command:
+- Execute the following MATLAB command (this sequential approach is very slow, and this can be done in parallel mode if you have access to cluster facility. ):
 > for month=1:12; for zlevel=1:47; objmap_o2clim(month,zlevel); end; end;
 - This function requires two supporting files (basin_name.txt and basin_mask_01.nc) available from the Dropbox link
 - use the function gen_netcdf_clim to generate a single netCDF file
@@ -55,7 +55,7 @@ See requirements.txt for the list of required python packages
 ### 5. Perform optimal interpolation
 - This part is done by the MATLAB script
 - use the objmap_o2 function and loop over the years
-- Execute the following MATLAB command:
+- Execute the following MATLAB command (this sequential approach is very slow, and this can be done in parallel mode if you have access to cluster facility. ):
 > for t=1:52; objmap_o2(t); end;
 - use the function gen_netcdf to generate a single netCDF file
 - Execute the following MATLAB command: 

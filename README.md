@@ -1,6 +1,7 @@
 # optint_wod_o2
 Optimal Interpolation of historical dissolved oxygen data from the World Ocean Database. 
-This code set requires python (jupyter notebook) and MATLAB
+This code set requires python (jupyter notebook) and MATLAB. 
+See requirements.txt for the list of required python packages
 
 ## Objective: 
 - Assess global dissolved oxygen inventory trend
